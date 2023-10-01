@@ -1,0 +1,97 @@
+Project 0: Group Evaluation Document
+Due Friday, September 8, 2023, at 11:59p
+Please submit ***one per person*** to the “Project 0 Group Evaluation” 
+assignment on Canvas
+
+
+Name: Anjali Agrawal
+EID: aa92778
+
+
+
+
+How did you do on this project?
+
+I did alright on this project. While we did pass all 
+the test cases to our knowledge, we realize that our 
+design lacked some foresight, in terms of the parsing 
+and tokenizing.
+
+
+
+What did you learn?
+
+I learned about the benefits of designing code early on 
+and reading about the full functionality of a function 
+via man pages before using the functions.
+
+
+
+What did your group do well?
+
+Our group met early, so we didn't have to procastinate 
+towards the end. We also regularly scheduled meetings to 
+discuss bugs. We took breaks, especially when debugging 
+the last testcase, which really helped. We also rewrote 
+the code to fix the last testcase, which was a great choice.
+
+
+
+What would you do differently in the next project?
+
+Design code for longer, and read about any system calls or 
+library calls in greater detail. Additionally, spend a day 
+reading the project description in full detail and asking 
+questions.
+
+
+
+Name of your project partner: Ishita Kumari
+EID of your project partner: ik4386
+Performance rating (see below): Very Good
+Explanation of rating:
+
+Ishita has a very good rating because she was always prompt in 
+attending meetings, excited to start new tasks on the project, 
+and very supportive whenever we had bugs. She also had good design 
+ideas for all components of the project and was a generally excellent
+collaborator. She provided good comments and feedback on the design 
+document we worked on together.
+
+################
+PARTNER EVALUATION SCALE
+################
+
+
+Very Good: Consistently did what they were supposed to do, very well
+prepared and cooperative, encouraged ideas from others, and 
+contributed their own ideas.
+
+
+Good: Consistently did what they were supposed to do, well
+prepared and cooperative, solicited ideas from others, and 
+contributed their own ideas.
+
+
+Satisfactory: Usually did what they were supposed to do, 
+prepared and cooperative, listened to ideas from others, and
+occasionally contributed their own ideas.
+
+
+Marginal: Often did what they were supposed to do, 
+less prepared but cooperative, listened to ideas from others but
+rarely contributed their own ideas.
+
+
+Deficient: Often failed to show up, rarely prepared, uncooperative, did not
+listen to others, OR did not contribute ideas.
+
+
+Unsatisfactory: Consistently failed to show up, rarely prepared, 
+uncooperative, did not listen to others, OR did not contribute ideas.
+
+
+Superficial: Practically no participation.
+
+
+No Show: No participation at all.
