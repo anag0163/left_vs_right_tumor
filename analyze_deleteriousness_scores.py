@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 df = pd.read_excel('C:\\Users\\anjal\\Downloads\\fm.xlsx', sheet_name='fm')
 df2 = pd.read_excel('C:\\Users\\anjal\\Downloads\\fm.clinicaldata.xlsx', sheet_name='fm.clinicaldata')
 
-score_name = 'BayesDel_addAF_score'
+score_name = 'LRT_score'
 scores_for_left = []
 scores_for_right = []
 dictionary_storing_left_right = {}
@@ -33,10 +33,10 @@ print(f"P-value: {p_value}")
 fig, ax = plt.subplots()
 
 data_to_plot = [scores_for_right, scores_for_left]
-ax.boxplot(data_to_plot, labels=['Right', 'Left'])
+ax.violinplot(data_to_plot)
 
 ax.set_xlabel('Tumor Side')
-ax.set_ylabel('BayesDel_addAF_score')
+ax.set_ylabel(score_name)
 ax.set_title('Side-by-Side Boxplots')
 
 plt.show()
