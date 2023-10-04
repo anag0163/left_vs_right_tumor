@@ -62,4 +62,19 @@ for gene in dict_for_left:
 print(p_value_lefts_smaller)
 print(p_value_rights_smaller)
 
-    
+df = pd.DataFrame(data=p_value_lefts_smaller, index=[0])
+
+df = (df.T)
+
+print (df)
+
+df.to_excel('lefts_smaller.xlsx')
+
+
+df = pd.DataFrame(data=p_value_rights_smaller, index=[0])
+
+df = (df.T)
+
+print (df)
+
+df.to_excel('rights_smaller.xlsx')
