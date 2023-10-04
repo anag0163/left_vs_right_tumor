@@ -1,6 +1,7 @@
 import pandas as pd
 from scipy.stats import mannwhitneyu
 import matplotlib.pyplot as plt
+from statsmodels.stats.proportion import proportions_ztest 
 
 
 df = pd.read_excel('C:\\Users\\anjal\\Downloads\\fm.xlsx', sheet_name='fm')
@@ -34,15 +35,31 @@ for index, row in df.iterrows():
             else:
                 dict_for_right[row['Hugo_Symbol']] = dict_for_right[row['Hugo_Symbol']]+1
 
+"""
 for entry in dict_for_left:
     dict_for_left[entry]= dict_for_left[entry]/left_count
 for entry in dict_for_right:
     dict_for_right[entry]= dict_for_right[entry]/right_count
     
-print(dict_for_left)
-print(dict_for_right)
+"""
+    
+#print(dict_for_left)
+#print(dict_for_right)
+
+p_value_rights_smaller = {}
+p_value_lefts_smaller = {}
 
 for gene in dict_for_left:
-    
+    if gene in dict_for_right:
+        stat, p_value_left_smaller = proportions_ztest([dict_for_left[gene], dict_for_right[gene]], [left_count, right_count], alternative='smaller')
+        if (p_value_left_smaller < 0.05) :
+            p_value_lefts_smaller[gene] = p_value_left_smaller
+        else :
+            stat, p_value_right_smaller = proportions_ztest([dict_for_left[gene], dict_for_right[gene]], [left_count, right_count], alternative='larger')
+            if (p_value_right_smaller < 0.05):
+                p_value_rights_smaller[gene] = p_value_right_smaller
+                
+print(p_value_lefts_smaller)
+print(p_value_rights_smaller)
 
     
