@@ -50,17 +50,19 @@ p_value_left_genes = {}
 p_value_right_genes = {}
 
 for gene in dict_for_left:
-   left_side_present = dict_for_left[gene]
-   left_side_absent = left_count - left_side_present
-   if gene in dict_for_right:
+    if gene in dict_for_right:
+        left_side_present = dict_for_left[gene]
+        left_side_absent = left_count - left_side_present
+        
         right_side_present = dict_for_right[gene]
-   else:
-       right_side_present = 0
-   right_side_absent = right_count - right_side_present
-   odds_ratio_side_a, p_value_side_a = stats.fisher_exact([[left_side_present, left_side_absent], [right_side_present, right_side_absent]])
-   if (p_value_side_a < 0.05):
-       p_value_left_genes[gene] = p_value_side_a
-       
+        right_side_absent = right_count - right_side_present
+        odds_ratio_side_a, p_value_side_a = stats.fisher_exact([[left_side_present, left_side_absent], [right_side_present, right_side_absent]])
+        if (odds_ratio_side_a > 1):
+            p_value_left_genes[gene] = odds_ratio_side_a
+        if (odds_ratio_side_a < 1):
+            p_value_right_genes[gene] = odds_ratio_side_a
+
+"""     
 for gene in dict_for_right:
    right_side_present = dict_for_right[gene]
    right_side_absent = right_count - right_side_present
@@ -70,9 +72,11 @@ for gene in dict_for_right:
         left_side_present = 0
    left_side_absent = left_count - left_side_present
    odds_ratio_side_a, p_value_side_a = stats.fisher_exact([[right_side_present, right_side_absent], [left_side_present, left_side_absent]])
-   if (p_value_side_a < 0.05):
-       p_value_right_genes[gene] = p_value_side_a
-
+   if (odds_ratio_side_a > 1):
+       p_value_right_genes[gene] = odds_ratio_side_a
+   if (odds_ratio_side_a < 1):
+       p_value_left_genes[gene] = odds_ratio_side_a
+"""
                 
 print(p_value_left_genes)
 print(p_value_right_genes)
