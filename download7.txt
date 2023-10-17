@@ -1,0 +1,2 @@
+11	795000	799001	Promoter
+11	798201	799200	CTCF Binding Site
